@@ -29,7 +29,7 @@ export default function Home() {
   }
 
   return (
-    <section className="relative overflow-hidden py-20 sm:py-28 lg:py-32">
+    <section className="relative overflow-hidden py-20 sm:py-28 lg:py-32 w-full">
       <div className="absolute inset-0 flex items-center justify-center">
         <img
           alt="background"
@@ -38,7 +38,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="relative z-10 container px-4">
+      <div className="relative z-10 container px-4 max-w-full">
         <div className="mx-auto flex max-w-5xl flex-col items-center">
           <div className="flex flex-col items-center gap-6 text-center w-full">
             <div>
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
 
             <p className="text-sm sm:text-base font-medium text-muted-foreground text-center max-w-md">
-              You can add data in the sheet using the link above and check the status here.
+              You can add data in the sheet using the link above <br/> and check the status here.
             </p>
 
             <Card className="w-full max-w-md shadow-lg rounded-xl mt-6">
@@ -88,24 +88,21 @@ export default function Home() {
                 </Button>
 
                 {status === 'issued' && (
-                  <Alert variant="default" className="border-green-500">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
+                  <Alert variant="default" className="border-green-500 shadow-xl shadow-green-50">
                     <AlertTitle className="text-green-700">Certificate Issued</AlertTitle>
                     <AlertDescription>Your certificate has been issued successfully.</AlertDescription>
                   </Alert>
                 )}
 
                 {status === 'not_issued' && (
-                  <Alert variant="destructive" className="border-red-500">
-                    <XCircle className="h-4 w-4 text-red-600" />
+                  <Alert variant="destructive" className="border-red-500 shadow-xl shadow-red-50">
                     <AlertTitle className="text-red-700">Not Issued</AlertTitle>
                     <AlertDescription>Your certificate has not been issued yet.</AlertDescription>
                   </Alert>
                 )}
 
                 {status === 'not_found' && (
-                  <Alert variant="default" className="border-gray-400">
-                    <Info className="h-4 w-4 text-gray-600" />
+                  <Alert variant="default" className="border-gray-400 shadow-xl shadow-gray-100">
                     <AlertTitle className="text-gray-700">Not Found</AlertTitle>
                     <AlertDescription>No certificate found for this registration number.</AlertDescription>
                   </Alert>
