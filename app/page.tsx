@@ -5,7 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { CheckCircle, XCircle, Info, ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
