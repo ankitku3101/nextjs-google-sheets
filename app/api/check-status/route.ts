@@ -29,8 +29,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       status: match[1]?.toLowerCase() === 'yes' ? 'issued' : 'not_issued',
     });
-  } catch (err: any) {
-    console.error('Google Sheets Error:', err);
-    return NextResponse.json({ status: 'error', message: err.message }, { status: 500 });
-  }
+  } catch (err: unknown) {
+    console.error('Google Sheets Error:', err)
+
+    if (err instanceof Error) {
+        return NextResponse.json(
+        { status: 'error', message: err.message },
+        { status: 500 }
+        )
+    }
+
+    return NextResponse.json(
+        { status: 'error', message: 'An unexpected error occurred' },
+        { status: 500 }
+    )
+    }
 }

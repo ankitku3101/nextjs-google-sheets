@@ -30,7 +30,6 @@ export default function Home() {
 
   return (
     <section className="relative overflow-hidden py-20 sm:py-28 lg:py-32">
-      {/* Background Grid */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
           alt="background"
@@ -39,11 +38,9 @@ export default function Home() {
         />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container px-4">
         <div className="mx-auto flex max-w-5xl flex-col items-center">
           <div className="flex flex-col items-center gap-6 text-center w-full">
-            {/* Heading */}
             <div>
               <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pretty">
                 Integrating Google Sheets in Next.js
@@ -53,7 +50,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-center gap-3 mt-2">
               <Link href="https://docs.google.com/spreadsheets/d/11AB8DQ29uDhfF0mJK7FTc8z-LLWU1EBkBfiKKaG1YK0/edit?usp=sharing" passHref>
                 <Button className="w-full sm:w-auto cursor-pointer">
@@ -69,12 +65,10 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Description */}
             <p className="text-sm sm:text-base font-medium text-muted-foreground text-center max-w-md">
               You can add data in the sheet using the link above and check the status here.
             </p>
 
-            {/* Card */}
             <Card className="w-full max-w-md shadow-lg rounded-xl mt-6">
               <CardHeader>
                 <CardTitle className="text-center text-xl sm:text-2xl">Check Certificate Status</CardTitle>
